@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Product } from "./types";
 import { withProduct } from "./hooks/withProduct";
 import { ProductBlock } from "./ProductBlock";
@@ -18,11 +18,6 @@ export const ProductForm = () => {
     setScrapeData(returnData)
     setDataScraped('true')
   }
-
-  useEffect(() => {
-    const newInput = scrapeData.filter((item) => item.title != '')
-    setScrapeData(newInput)
-  }, [dataScraped])
 
   return (
     <div>
