@@ -23,15 +23,18 @@ export const ProductForm = () => {
   };
 
   useEffect(() => {
-    const newInput = scrapeData.filter((item) => item.title != '');
-    setScrapeData(newInput);
+    // Check if scrapeData has changed before filtering and updating it
+    if (scrapeData.length > 0) {
+      const newInput = scrapeData.filter((item) => item.title !== '');
+      setScrapeData(newInput);
+    }
   }, [scrapeData]);
 
   return (
     <div>
       <div className='searchForm'>
   
-        <input defaultValue='Email' type='email' value={formInput} onChange={handleInput} />
+        <input type='text' value={formInput} onChange={handleInput} />
         <button onClick={handleSubmit}>Search</button>
       </div>
       <div className="productsContainer">

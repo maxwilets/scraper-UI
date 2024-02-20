@@ -20,6 +20,8 @@ export const LoginForm = () => {
   const handleSubmit = async (): Promise<void> => {
     try {
       const returnData: Product[] | undefined = await withLogin(emailInput, passwordInput, type);
+      setEmailInput('')
+      setPasswordInput('')
       if (returnData) {
         setScrapeData(returnData);
       } else {
@@ -41,6 +43,7 @@ export const LoginForm = () => {
         <div  className="dropdownBlock">
           <select value={type} onChange={handleInputChange}>
             <option>Amazon</option>
+            <option>Playstation</option>
             <option>Capital One</option>
           </select>
         </div>
