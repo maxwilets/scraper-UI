@@ -30,6 +30,7 @@ export const ProductForm = () => {
   return (
     <div>
       <div className='searchForm'>
+  
         <input defaultValue='Email' type='email' value={formInput} onChange={handleInput} />
         <button onClick={handleSubmit}>Search</button>
       </div>

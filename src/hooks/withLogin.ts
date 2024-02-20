@@ -1,11 +1,11 @@
-  export const withLogin = async (username: string, password: string,) => {
+  export const withLogin = async (username: string, password: string, type: string) => {
     try {
       const response = await fetch('http://localhost:5001/scrape', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ username, password }),
+        body: JSON.stringify({ username, password, type }),
       });
 
       if (!response.ok) {
