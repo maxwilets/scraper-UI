@@ -33,11 +33,11 @@ export const ProductForm = () => {
   return (
     <div>
       {/* seach form for changing different scrapers */}
-      {/* <div className='searchForm'>
+      <div className='searchForm'>
   
         <input type='text' value={formInput} onChange={handleInput} />
         <button onClick={handleSubmit}>Search</button>
-      </div> */}
+      </div>
       <div className="productsContainer">
         {isFetching && <h4>Loading...</h4>}
         {!isFetching && isRequestValid === false && (

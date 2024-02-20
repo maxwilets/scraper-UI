@@ -8,7 +8,7 @@ export const LoginForm = () => {
   const [emailInput, setEmailInput] = useState('');
   const [passwordInput, setPasswordInput] = useState('');
   const [scrapeData, setScrapeData] = useState<any| undefined>([])
-  const [type, setType] = useState('amazon')
+  const [type, setType] = useState('Amazon')
   const handleEmailInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
     setEmailInput(event.target.value);
   };
@@ -40,13 +40,13 @@ export const LoginForm = () => {
     <div>
       <h2>{type}</h2>
       <div className='searchForm loginForm'>
-        <div  className="dropdownBlock">
+        {/* <div  className="dropdownBlock">
           <select value={type} onChange={handleInputChange}>
             <option>Amazon</option>
             <option>Playstation</option>
             <option>Capital One</option>
           </select>
-        </div>
+        </div> */}
         <div className="inputBlock">
           <label>Email</label>
           <input type='email' value={emailInput} onChange={ handleEmailInput} />
